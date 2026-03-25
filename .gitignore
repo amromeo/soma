@@ -3,3 +3,4 @@ data/pins_board/
 Rplots.pdf
 .Rhistory
 .RData
+.r-lib/
