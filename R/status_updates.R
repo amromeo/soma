@@ -10,49 +10,63 @@ persist_pdf_update <- function(mutator) {
 
 mark_pdf_worked <- function(pdf_id, user = NA_character_) {
   persist_pdf_update(function(df) {
-    df %>%
-      mutate(
-        worked_status = if_else(.data$pdf_id == pdf_id, "worked", .data$worked_status),
-        worked_by = if_else(.data$pdf_id == pdf_id, user, .data$worked_by),
-        worked_datetime = if_else(.data$pdf_id == pdf_id, Sys.time(), .data$worked_datetime),
-        pdf_status = if_else(.data$pdf_id == pdf_id, "worked", .data$pdf_status)
-      )
+    row_idx <- which(df$pdf_id == pdf_id)
+    if (!length(row_idx)) {
+      return(df)
+    }
+    df$worked_status[row_idx] <- "worked"
+    df$worked_by[row_idx] <- user
+    df$worked_datetime[row_idx] <- Sys.time()
+    df$pdf_status[row_idx] <- "worked"
+    df
   })
 }
 
 mark_pdf_reviewed <- function(pdf_id, user = NA_character_) {
   persist_pdf_update(function(df) {
-    df %>%
-      mutate(
-        worked_status = if_else(.data$pdf_id == pdf_id, "reviewed", .data$worked_status),
-        worked_by = if_else(.data$pdf_id == pdf_id, user, .data$worked_by),
-        pdf_status = if_else(.data$pdf_id == pdf_id, "reviewed", .data$pdf_status)
-      )
+    row_idx <- which(df$pdf_id == pdf_id)
+    if (!length(row_idx)) {
+      return(df)
+    }
+    df$worked_status[row_idx] <- "reviewed"
+    df$worked_by[row_idx] <- user
+    df$pdf_status[row_idx] <- "reviewed"
+    df
   })
 }
 
 mark_pdf_external <- function(pdf_id, user = NA_character_) {
   persist_pdf_update(function(df) {
-    df %>%
-      mutate(
-        worked_status = if_else(.data$pdf_id == pdf_id, "worked_outside_system", .data$worked_status),
-        worked_by = if_else(.data$pdf_id == pdf_id, user, .data$worked_by),
-        worked_datetime = if_else(.data$pdf_id == pdf_id, Sys.time(), .data$worked_datetime),
-        pdf_status = if_else(.data$pdf_id == pdf_id, "worked_outside_system", .data$pdf_status)
-      )
+    row_idx <- which(df$pdf_id == pdf_id)
+    if (!length(row_idx)) {
+      return(df)
+    }
+    df$worked_status[row_idx] <- "worked_outside_system"
+    df$worked_by[row_idx] <- user
+    df$worked_datetime[row_idx] <- Sys.time()
+    df$pdf_status[row_idx] <- "worked_outside_system"
+    df
   })
 }
 
 update_pdf_notes <- function(pdf_id, text) {
   persist_pdf_update(function(df) {
-    df %>%
-      mutate(notes = if_else(.data$pdf_id == pdf_id, text, .data$notes))
+    row_idx <- which(df$pdf_id == pdf_id)
+    if (!length(row_idx)) {
+      return(df)
+    }
+    df$notes[row_idx] <- text
+    df
   })
 }
 
 assign_pdf <- function(pdf_id, user) {
   persist_pdf_update(function(df) {
-    df %>%
-      mutate(assigned_to = if_else(.data$pdf_id == pdf_id, user, .data$assigned_to))
+    row_idx <- which(df$pdf_id == pdf_id)
+    if (!length(row_idx)) {
+      return(df)
+    }
+    df$assigned_to[row_idx] <- user
+    df
   })
 }
