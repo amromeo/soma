@@ -1,0 +1,7 @@
+order_id,patient_id,patient_name,test_name,reference_lab,order_datetime,specimen_datetime,expected_tat_hours,lis_result_verified_datetime,order_status
+SO-1001,P-1001,Avery Brooks,Hemoglobin Electrophoresis,Quest Specialty,2026-03-20 08:15:00,2026-03-20 07:58:00,48,,pending
+SO-1002,P-1002,Jordan Lee,Porphyrins Panel,Mayo Clinic Labs,2026-03-18 09:45:00,2026-03-18 09:10:00,72,2026-03-21 14:00:00,verified
+SO-1003,P-1003,Riley Patel,Copper Serum,ARUP,2026-03-15 11:05:00,2026-03-15 10:40:00,96,,pending
+SO-1004,P-1004,Taylor Nguyen,Vitamin B1 Plasma,Quest Specialty,2026-03-21 13:20:00,2026-03-21 12:55:00,48,,pending
+SO-1005,P-1005,Morgan Diaz,Amino Acid Quant,Mayo Clinic Labs,2026-03-17 16:30:00,2026-03-17 16:05:00,72,2026-03-20 10:15:00,verified
+SO-1006,P-1006,Cameron Smith,Organic Acids Urine,ARUP,2026-03-14 07:40:00,2026-03-14 07:10:00,120,,pending

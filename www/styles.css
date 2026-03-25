@@ -1,0 +1,121 @@
+body {
+  background: linear-gradient(180deg, #f4f7f8 0%, #eef3f5 100%);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.app-intro,
+.toolbar-card,
+.panel-card,
+.metric-box {
+  background: #ffffff;
+  border: 1px solid #d7e1e5;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(25, 46, 61, 0.08);
+}
+
+.app-intro,
+.toolbar-card,
+.panel-card {
+  padding: 18px 20px;
+  margin-bottom: 18px;
+}
+
+.toolbar-card .form-group {
+  margin-bottom: 12px;
+}
+
+.metric-box {
+  min-height: 110px;
+  padding: 18px;
+  margin-bottom: 18px;
+}
+
+.metric-label {
+  color: #5b6b73;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.metric-primary {
+  border-top: 5px solid #1f6f8b;
+}
+
+.metric-warning {
+  border-top: 5px solid #dd8b20;
+}
+
+.metric-danger {
+  border-top: 5px solid #b83232;
+}
+
+.metric-success {
+  border-top: 5px solid #2f7d32;
+}
+
+.status-badge {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge-new {
+  background: #dbeeff;
+  color: #0f4c75;
+}
+
+.badge-reviewed {
+  background: #fdf0cf;
+  color: #8a6116;
+}
+
+.badge-worked {
+  background: #dff3e2;
+  color: #2f6f35;
+}
+
+.badge-external {
+  background: #ede0ff;
+  color: #6541a3;
+}
+
+.badge-archived,
+.badge-neutral {
+  background: #e8eef1;
+  color: #5b6b73;
+}
+
+.badge-overdue {
+  background: #ffe0e0;
+  color: #992525;
+}
+
+.summary-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #edf2f4;
+}
+
+.placeholder-card {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pdf-action {
+  margin-right: 6px;
+  margin-bottom: 6px;
+}

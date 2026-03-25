@@ -1,0 +1,5 @@
+pdf_path,ocr_text,ocr_status,ocr_engine,ocr_processed_datetime,ocr_confidence,text_version
+C:/lab/results/quest/quest_so1004.pdf,"Quest Specialty report for Taylor Nguyen. Vitamin B1 plasma result attached. Collected 2026-03-21. Final report issued to ordering site.",completed,azure-document-intelligence,2026-03-24 08:06:00,0.98,v1
+C:/lab/results/mayo/mayo_porphyrins_1002.pdf,"Mayo Clinic Laboratories porphyrins panel. Patient Jordan Lee. Verified result PDF received by inbound pipeline.",completed,azure-document-intelligence,2026-03-24 07:23:00,0.97,v1
+C:/lab/results/arup/arup_copper_1003.pdf,"ARUP copper serum report. Patient Riley Patel. OCR extracted accession fragments and specimen collection date.",completed,azure-document-intelligence,2026-03-23 15:42:00,0.94,v1
+C:/lab/results/arup/arup_organic_1006.pdf,"ARUP organic acids urine report. Multi-page PDF. OCR text retained for downstream candidate matching.",completed,azure-document-intelligence,2026-03-22 10:13:00,0.95,v1

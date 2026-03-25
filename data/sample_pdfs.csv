@@ -1,0 +1,5 @@
+pdf_received_datetime,pdf_path,pdf_filename,pdf_pages,pdf_source_folder,pdf_status
+2026-03-24 08:05:00,C:/lab/results/quest/quest_so1004.pdf,quest_so1004.pdf,4,C:/lab/results/quest,received
+2026-03-24 07:22:00,C:/lab/results/mayo/mayo_porphyrins_1002.pdf,mayo_porphyrins_1002.pdf,6,C:/lab/results/mayo,received
+2026-03-23 15:41:00,C:/lab/results/arup/arup_copper_1003.pdf,arup_copper_1003.pdf,3,C:/lab/results/arup,received
+2026-03-22 10:12:00,C:/lab/results/arup/arup_organic_1006.pdf,arup_organic_1006.pdf,8,C:/lab/results/arup,received
